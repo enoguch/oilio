@@ -13,7 +13,7 @@ oilio [CLI_MODE_OPTION] [FILEs|DIRs]
   * -b    バイト数表示
   * -c    文字数表示
   * -l    行数表示
-  * -n    .gitignore内のを見ない
+  * -n    .gitignore内のファイルを見ない
   * -h    ヘルプ表示
 
 # アイコン
