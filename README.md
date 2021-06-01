@@ -22,5 +22,5 @@ oilio [CLI_MODE_OPTION] [FILEs|DIRs]
 
 # アイコン
 ![whale-animal-publicdomainvectors](https://user-images.githubusercontent.com/84704334/119367448-ed089b00-bcec-11eb-850e-21628810b8d8.png)
-
+アイコンは[freesvg.org]より取得(https://freesvg.org/whale)
 
