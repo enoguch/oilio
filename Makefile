@@ -43,10 +43,10 @@ clean:
 	$(GO) clean
 	rm -rf $(NAME) dist
 
-define _update_docker
-	(sed -e '$$d' Dockerfile ; echo $(1)) > a
-	mv a Dockerfile
-endef
+#define _update_docker
+#	(sed -e '$$d' Dockerfile ; echo $(1)) > a
+#	mv a Dockerfile
+#endef
 
 heroku:
 	@$(call _update_docker,'CMD /opt/oilio/oilio --server --port $$PORT')
