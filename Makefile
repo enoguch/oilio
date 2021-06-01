@@ -31,13 +31,13 @@ build: setup
 
 #docs/public:
 
-dist: build docs
-	@$(call _createDist,darwin,amd64)
-	@$(call _createDist,darwin,arm64)
-	@$(call _createDist,windows,amd64,.exe)
-	@$(call _createDist,windows,386,.exe)
-	@$(call _createDist,linux,amd64)
-	@$(call _createDist,linux,386)
+
+#dist: build docs
+#	@$(call _createDist,darwin,amd64)
+#	@$(call _createDist,darwin,arm64)
+#	@$(call _createDist,windows,386,.exe)
+#	@$(call _createDist,linux,amd64)
+#	@$(call _createDist,linux,386)
 
 clean:
 	$(GO) clean
@@ -49,7 +49,7 @@ define _update_docker
 endef
 
 heroku:
-	@$(call _update_docker,'CMD /opt/wildcat/wildcat --server --port $$PORT')
+	@$(call _update_docker,'CMD /opt/oilio/oilio --server --port $$PORT')
 	heroku container:push web
 	heroku container:release web
-	@$(call _update_docker,'ENTRYPOINT [ "/opt/wildcat/wildcat" ]')
+	@$(call _update_docker,'ENTRYPOINT [ "/opt/oilio/oilio" ]')
