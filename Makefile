@@ -6,7 +6,7 @@ DIST := $(NAME)-$(VERSION)
 
 all: test build
 
-setup: update_version
+setup: #update_version
 
 #update_version:
 #	@for i in README.md docs/content/_index.md ; do \
