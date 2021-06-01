@@ -1,4 +1,3 @@
-[![CI](https://github.com/enoguch/oilio/actions/workflows/ci.yml/badge.svg)](https://github.com/enoguch/oilio/actions/workflows/ci.yml)
 [![license](http://img.shields.io/badge/license-CC0-green.svg)](https://github.com/enoguch/oilio/blob/main/LICENSE)
 
 
