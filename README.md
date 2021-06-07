@@ -12,13 +12,13 @@ wcコマンドを拡張したソフトウェア
 * アーカイブファイルも扱える(jar, tar, tazなど)
 
 # 使用方法
-oilio [CLI_MODE_OPTION] [FILEs|DIRs]
+oilio [CLI_MODE_OPTION] [FILEs...|DIRs...]
 * コマンドオプション
-  * -b    バイト数表示
-  * -c    文字数表示
-  * -l    行数表示
-  * -n    .gitignore内のファイルを見ない
-  * -h    ヘルプ表示
+  * -b, --byte         バイト数表示
+  * -c, --character    文字数表示
+  * -l, --line         行数表示
+  * -n, --no-ignore    .gitignore内のファイルを見ない
+  * -h, --help         ヘルプ表示
 
 # アイコン
 ![whale-animal-publicdomainvectors](https://user-images.githubusercontent.com/84704334/119367448-ed089b00-bcec-11eb-850e-21628810b8d8.png)
