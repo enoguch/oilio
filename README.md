@@ -1,4 +1,6 @@
 [![CI](https://github.com/enoguch/oilio/actions/workflows/main.yml/badge.svg)](https://github.com/enoguch/oilio/actions/workflows/main.yml)
+[![Coverage Status](https://coveralls.io/repos/github/enoguch/oilio/badge.svg?branch=main)](https://coveralls.io/github/enoguch/oilio?branch=main)
+[![Go Report Card](https://goreportcard.com/badge/github.com/enoguch/oilio)](https://goreportcard.com/report/github.com/enoguch/oilio)
 [![license](http://img.shields.io/badge/license-CC0-green.svg)](https://github.com/enoguch/oilio/blob/main/LICENSE)
 
 
