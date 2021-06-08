@@ -45,10 +45,6 @@ func options() {
 	flag.Parse()
 }
 
-
-func goMain(args []string) int {
-
-}
 */
 
 func goMain(args []string) int {
