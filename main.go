@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -24,31 +25,41 @@ func helpMessage(originalProgramname string) string {
 }
 
 /*
-var (
-	byteFlag   int
-	charFlag   int
-	lineFlag   int
-	ignoreFlag bool
-	helpFlag   string
-)
-
-func options() {
-	flag.IntVar(&byteFlag, "b", 0, "バイト数表示")
-	flag.IntVar(&byteFlag, "byte", 0, "バイト数表示")
-	flag.IntVar(&charFlag, "c", 0, "文字数表示")
-	flag.IntVar(&charFlag, "character", 0, "文字数表示")
-	flag.IntVar(&lineFlag, "l", 0, "行数表示")
-	flag.IntVar(&lineFlag, "line", 0, "行数表示")
-	flag.BoolVar(&ignoreFlag, "n", false, "ignoreファイルを参照しない")
-	flag.BoolVar(&ignoreFlag, "no-ignore", false, "ignoreファイルを参照しない")
-
-	flag.Parse()
+func isDir(filename string) {
+	filename :=
 }
-
 */
 
+func fileReadLine(fileName string) {
+	line := 0
+	fp, err := os.Open(fileName)
+
+	if err != nil {
+		panic(err)
+	}
+	defer fp.Close()
+
+	scanner := bufio.NewScanner(fp)
+	for scanner.Scan() {
+		line++
+	}
+	if err = scanner.Err(); err != nil {
+		panic(err)
+	}
+
+	fmt.Println("Line:", line)
+}
+
 func goMain(args []string) int {
-	fmt.Println(helpMessage(args[0]))
+	if len(os.Args) == 1 {
+		fmt.Println(helpMessage(args[0]))
+		return 0
+	} else if args[1] == "-h" || args[1] == "--help" {
+		fmt.Println(helpMessage(args[0]))
+		return 0
+	}
+
+	fileReadLine(args[1])
 	return 0
 }
 
