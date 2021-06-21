@@ -1,11 +1,31 @@
 package main
 
 import (
-	"bufio"
+	"bytes"
 	"fmt"
+	"io/ioutil"
 	"os"
 	"path/filepath"
+	"unicode/utf8"
+
+	flag "github.com/spf13/pflag"
 )
+
+type options struct {
+	bytet     bool
+	character bool
+	word      bool
+	line      bool
+	help      bool
+	args      []string
+}
+
+type counts struct {
+	bytes int
+	chars int
+	words int
+	lines int
+}
 
 func helpMessage(originalProgramname string) string {
 	programName := filepath.Base(originalProgramname)
@@ -24,42 +44,76 @@ func helpMessage(originalProgramname string) string {
 	`, programName)
 }
 
-/*
-func isDir(filename string) {
-	filename :=
+func parseArgs(args []string) (*options, error) {
+	opts := &options{}
+	flags := flag.NewFlagSet("oilio", flag.ContinueOnError)
+	flags.Usage = func() { fmt.Println(helpMessage(args[0])) }
+	flags.BoolVarP(&opts.bytet, "byte", "b", false, "バイト数")
+	flags.BoolVarP(&opts.character, "character", "c", false, "文字数")
+	flags.BoolVarP(&opts.word, "word", "w", false, "単語数")
+	flags.BoolVarP(&opts.line, "line", "l", false, "行数")
+	flags.BoolVarP(&opts.help, "help", "h", false, "ヘルプ表示")
+
+	if err := flags.Parse(args); err != nil {
+		return nil, err
+	}
+	if !opts.bytet && !opts.character && !opts.word && !opts.line {
+		opts.bytet = true
+		opts.character = true
+		opts.word = true
+		opts.line = true
+	}
+	opts.args = flags.Args()[1:]
+
+	return opts, nil
 }
-*/
 
-func fileReadLine(fileName string) {
-	line := 0
-	fp, err := os.Open(fileName)
-
-	if err != nil {
-		panic(err)
+func printer(o *options, c counts, filename string) {
+	if o.line {
+		fmt.Printf("line: %d   ", c.lines)
 	}
-	defer fp.Close()
-
-	scanner := bufio.NewScanner(fp)
-	for scanner.Scan() {
-		line++
+	if o.bytet {
+		fmt.Printf("byte: %d   ", c.bytes)
 	}
-	if err = scanner.Err(); err != nil {
-		panic(err)
+	if o.character {
+		fmt.Printf("char: %d   ", c.chars)
 	}
+	if o.word {
+		fmt.Printf("word: %d   ", c.words)
+	}
+	fmt.Println(filename)
 
-	fmt.Println("Line:", line)
+}
+
+func Count(o *options, filenames []string) {
+	var c counts
+	for _, filename := range filenames {
+		fp, err := os.Open(filename)
+		if err != nil {
+			continue
+		}
+		a, _ := ioutil.ReadAll(fp)
+		c.lines = bytes.Count(a, []byte{'\n'})
+		c.bytes = len(a)
+		c.chars = utf8.RuneCountInString(string(a))
+		c.words = len(bytes.Fields(a))
+
+		printer(o, c, filename)
+
+	}
 }
 
 func goMain(args []string) int {
-	if len(os.Args) == 1 {
-		fmt.Println(helpMessage(args[0]))
-		return 0
-	} else if args[1] == "-h" || args[1] == "--help" {
-		fmt.Println(helpMessage(args[0]))
-		return 0
+	opts, err := parseArgs(args)
+	if err != nil {
+		fmt.Printf("%s", err.Error())
 	}
+	if opts.help {
+		fmt.Println(helpMessage(args[0]))
+		return 1
+	}
+	Count(opts, opts.args)
 
-	fileReadLine(args[1])
 	return 0
 }
 
