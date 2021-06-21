@@ -110,7 +110,7 @@ func goMain(args []string) int {
 	}
 	if opts.help {
 		fmt.Println(helpMessage(args[0]))
-		return 1
+		return 0
 	}
 	Count(opts, opts.args)
 
