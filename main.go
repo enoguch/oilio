@@ -70,16 +70,16 @@ func parseArgs(args []string) (*options, error) {
 
 func printer(o *options, c counts, filename string) {
 	if o.line {
-		fmt.Printf("line: %d   ", c.lines)
+		fmt.Printf("line: %5d   ", c.lines)
 	}
 	if o.bytet {
-		fmt.Printf("byte: %d   ", c.bytes)
+		fmt.Printf("byte: %5d   ", c.bytes)
 	}
 	if o.character {
-		fmt.Printf("char: %d   ", c.chars)
+		fmt.Printf("char: %5d   ", c.chars)
 	}
 	if o.word {
-		fmt.Printf("word: %d   ", c.words)
+		fmt.Printf("word: %5d   ", c.words)
 	}
 	fmt.Println(filename)
 
@@ -88,6 +88,34 @@ func printer(o *options, c counts, filename string) {
 func Count(o *options, filenames []string) {
 	var c counts
 	for _, filename := range filenames {
+		fileInfo, _ := os.Stat(filename)
+		if fileInfo.IsDir() {
+			/*
+				root := fileInfo.Name()
+				fmt.Println(filename)
+			*/
+			rootFiles, _ := ioutil.ReadDir(filename)
+			for _, rootFile := range rootFiles {
+				if rootFile.IsDir() {
+					continue
+				}
+				fullPath := filepath.Join(filename, rootFile.Name())
+				rfp, err := os.Open(fullPath)
+				if err != nil {
+					continue
+				}
+				r, _ := ioutil.ReadAll(rfp)
+				c.lines = bytes.Count(r, []byte{'\n'})
+				c.bytes = len(r)
+				c.chars = utf8.RuneCountInString(string(r))
+				c.words = len(bytes.Fields(r))
+
+				printer(o, c, fullPath)
+			}
+
+			continue
+		}
+
 		fp, err := os.Open(filename)
 		if err != nil {
 			continue
