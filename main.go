@@ -136,7 +136,7 @@ func goMain(args []string) int {
 	if err != nil {
 		fmt.Printf("%s", err.Error())
 	}
-	if opts.help {
+	if opts.help || len(args) == 1 {
 		fmt.Println(helpMessage(args[0]))
 		return 0
 	}
