@@ -1,4 +1,4 @@
-FROM alpine:3.10.1
+FROM alpine:latest
 
 ARG version=1.0.0
 
