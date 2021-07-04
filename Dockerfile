@@ -8,7 +8,7 @@ LABEL maintainer="Yohei Noguchi" \
 RUN    adduser -D oilio \
     && apk --no-cache add --update --virtual .builddeps curl tar \
     #&& curl -s -L -O https://github.com/enoguch/oilio/releases/download/v${version}/oilio-${version}_linux_amd64.tar.gz \
-    && curl -s -L -o oilio-${version}_linux_amd64.tar.gz https://www.dropbox.com/sh/kgme6kiqmcpzsxp/AABims3CQDESKQVwlYGxzXEGa?dl=0 \
+    && curl -s -L -o oilio-${version}_linux_amd64.tar.gz https://www.dropbox.com/s/puq5fcrq5htbbf0/oilio-1.0.0_linux_amd64.tar.gz?dl=0 \
     && tar xfz oilio-${version}_linux_amd64.tar.gz     \
     && mv oilio-${version} /opt                        \
     && ln -s /opt/oilio-${version} /opt/oilio        \
