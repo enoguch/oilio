@@ -2,6 +2,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/enoguch/oilio/badge.svg?branch=main)](https://coveralls.io/github/enoguch/oilio?branch=main)
 [![Go Report Card](https://goreportcard.com/badge/github.com/enoguch/oilio)](https://goreportcard.com/report/github.com/enoguch/oilio)
 [![license](http://img.shields.io/badge/license-CC0-green.svg)](https://github.com/enoguch/oilio/blob/main/LICENSE)
+[![Docker](https://img.shields.io/badge/Docker-ghcr.io%2Fenoguch%2Foilio%3A1.0.0-green?logo=docker)](https://hub.docker.com/repository/docker/enoguch/oilio)
 
 
 # oilio
