@@ -7,7 +7,6 @@ all: test build
 	echo "all clear"
 setup:
 	git submodule update --init
-	git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
 
 test: setup
 	$(GO) test -covermode=count -coverprofile=coverage.out $$(go list ./...)
