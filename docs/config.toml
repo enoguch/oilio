@@ -1,0 +1,4 @@
+baseURL = "https://enoguch.github.io/oilio"
+languageCode = "ja-us"
+title = "oilio page"
+theme = "ananke"
