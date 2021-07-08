@@ -1,4 +1,3 @@
-baseURL = "https://enoguch.github.io/oilio"
-languageCode = "ja-us"
-title = "oilio page"
-theme = "ananke"
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
