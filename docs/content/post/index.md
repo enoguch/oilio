@@ -1,9 +1,10 @@
 ---
-title: "oilio"
-date: 2021-07-08
+title: "_Index"
+date: 2021-07-12
 tags: []
-draft: true
+draft: false
 ---
+
 
 [![CI](https://github.com/enoguch/oilio/actions/workflows/main.yml/badge.svg)](https://github.com/enoguch/oilio/actions/workflows/main.yml)
 [![Coverage Status](https://coveralls.io/repos/github/enoguch/oilio/badge.svg?branch=main)](https://coveralls.io/github/enoguch/oilio?branch=main)
@@ -11,7 +12,6 @@ draft: true
 [![license](http://img.shields.io/badge/license-CC0-green.svg)](https://github.com/enoguch/oilio/blob/main/LICENSE)
 
 [![Docker](https://img.shields.io/badge/Docker-ghcr.io%2Fenoguch%2Foilio%3A1.0.0-green?logo=docker)](https://hub.docker.com/repository/docker/enoguch/oilio)
-
 
 # oilio
 wcコマンドを拡張したソフトウェア
