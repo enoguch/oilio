@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja-us">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>_Index</title>
+        
+        <style>
+
+    html body {
+        font-family: 'Raleway', sans-serif;
+        background-color: white;
+    }
+
+    :root {
+        --accent: red;
+        --border-width:  5px ;
+    }
+
+</style>
+
+
+<link rel="stylesheet" href="http://example.com/css/main.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+ 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
+ <meta name="generator" content="Hugo 0.84.4" />
+        
+
+        
+
+        
+            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+
+        
+
+    </head>
+
+    <body>
+        
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand visible-xs" href="#">_Index</a>
+                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+                        <ul class="nav navbar-nav">
+                            
+                                <li><a href="/post/">Home</a></li>
+                            
+                        </ul>
+                    
+                    
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                                <li class="navbar-icon"><a href="https://github.com/username/"><i class="fab fa-github"></i></a></li>
+                            
+                        </ul>
+                    
+                </div>
+            </div>
+        </nav>
+
+
+<main>
+
+    <div>
+        <h2>_Index</h2>
+        <h5></h5>
+        
+
+    </div>
+
+    <div align="start" class="content"><p><a href="https://github.com/enoguch/oilio/actions/workflows/main.yml"><img src="https://github.com/enoguch/oilio/actions/workflows/main.yml/badge.svg" alt="CI"></a>
+<a href="https://coveralls.io/github/enoguch/oilio?branch=main"><img src="https://coveralls.io/repos/github/enoguch/oilio/badge.svg?branch=main" alt="Coverage Status"></a>
+<a href="https://goreportcard.com/report/github.com/enoguch/oilio"><img src="https://goreportcard.com/badge/github.com/enoguch/oilio" alt="Go Report Card"></a>
+<a href="https://github.com/enoguch/oilio/blob/main/LICENSE"><img src="http://img.shields.io/badge/license-CC0-green.svg" alt="license"></a></p>
+<p><a href="https://hub.docker.com/repository/docker/enoguch/oilio"><img src="https://img.shields.io/badge/Docker-ghcr.io%2Fenoguch%2Foilio%3A1.0.0-green?logo=docker" alt="Docker"></a></p>
+<h1 id="oilio">oilio</h1>
+<p>wcコマンドを拡張したソフトウェア</p>
+<h2 id="概要">概要</h2>
+<p>与えられたファイルもしくは与えられたディレクトリの直下のファイル群の
+行数、文字数、バイト数をカウントする．</p>
+<ul>
+<li>.gitignoreファイルを参照できる</li>
+<li>アーカイブファイルも扱える(jar, tar, tazなど)</li>
+</ul>
+<h1 id="使用方法">使用方法</h1>
+<p>oilio [CLI_MODE_OPTION] [FILEs&hellip;|DIRs&hellip;]</p>
+<ul>
+<li>コマンドオプション
+<ul>
+<li>-b, &ndash;byte         バイト数表示</li>
+<li>-c, &ndash;character    文字数表示</li>
+<li>-l, &ndash;line         行数表示</li>
+<li>-n, &ndash;no-ignore    .gitignore内のファイルを見ない</li>
+<li>-h, &ndash;help         ヘルプ表示</li>
+</ul>
+</li>
+</ul>
+<h1 id="アイコン">アイコン</h1>
+<p><img src="https://user-images.githubusercontent.com/84704334/119367448-ed089b00-bcec-11eb-850e-21628810b8d8.png" alt="whale-animal-publicdomainvectors"></p>
+<p>アイコンは<a href="https://freesvg.org/whale">freesvg.org</a>より取得</p>
+</div>
+
+</main>
+
+        <footer>
+            <p class="copyright text-muted">© All rights reserved. Powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/calintat/minimal">Minimal</a>.</p>
+        </footer>
+
+        
+
+        
+    </body>
+
+</html>
+
