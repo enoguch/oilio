@@ -5,8 +5,6 @@
 
 [![Docker](https://img.shields.io/badge/Docker-ghcr.io%2Fenoguch%2Foilio%3A1.0.0-green?logo=docker)](https://hub.docker.com/repository/docker/enoguch/oilio)
 
-aa
-
 # oilio
 wcコマンドを拡張したソフトウェア
 
