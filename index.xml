@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Minimal</title>
+    <link>http://example.com/</link>
+    <description>Recent content on Minimal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-us</language><atom:link href="http://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>_Index</title>
+      <link>http://example.com/post/</link>
+      <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.com/post/</guid>
+      <description>oilio wcコマンドを拡張したソフトウェア
+概要 与えられたファイルもしくは与えられたディレクトリの直下のファイル群の 行数、文字数、バイト数をカウントする．
+ .gitignoreファイルを参照できる アーカイブファイルも扱える(jar, tar, tazなど)  使用方法 oilio [CLI_MODE_OPTION] [FILEs&amp;hellip;|DIRs&amp;hellip;]
+ コマンドオプション  -b, &amp;ndash;byte バイト数表示 -c, &amp;ndash;character 文字数表示 -l, &amp;ndash;line 行数表示 -n, &amp;ndash;no-ignore .gitignore内のファイルを見ない -h, &amp;ndash;help ヘルプ表示    アイコン アイコンはfreesvg.orgより取得</description>
+    </item>
+    
+  </channel>
+</rss>
