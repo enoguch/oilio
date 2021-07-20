@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Minimal</title>
-    <link>http://enoguch.github.io/oilio/categories/</link>
+    <link>https://enoguch.github.io/oilio/categories/</link>
     <description>Recent content in Categories on Minimal</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-us</language><atom:link href="http://enoguch.github.io/oilio/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja-us</language><atom:link href="https://enoguch.github.io/oilio/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
