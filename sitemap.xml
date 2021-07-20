@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://enoguch.github.io/oilio/post/</loc>
+    <loc>https://enoguch.github.io/oilio/post/</loc>
     <lastmod>2021-07-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://enoguch.github.io/oilio/categories/</loc>
+    <loc>https://enoguch.github.io/oilio/categories/</loc>
   </url><url>
-    <loc>http://enoguch.github.io/oilio/</loc>
+    <loc>https://enoguch.github.io/oilio/</loc>
   </url><url>
-    <loc>http://enoguch.github.io/oilio/tags/</loc>
+    <loc>https://enoguch.github.io/oilio/tags/</loc>
   </url>
 </urlset>
