@@ -14,8 +14,8 @@
       <guid>https://enoguch.github.io/oilio/post/</guid>
       <description>oilio wcコマンドを拡張したソフトウェア
 概要 与えられたファイルもしくは与えられたディレクトリの直下のファイル群の 行数、文字数、バイト数をカウントする．
- .gitignoreファイルを参照できる アーカイブファイルも扱える(jar, tar, tazなど)  使用方法 oilio [CLI_MODE_OPTION] [FILEs&amp;hellip;|DIRs&amp;hellip;]
- コマンドオプション  -b, &amp;ndash;byte バイト数表示 -c, &amp;ndash;character 文字数表示 -l, &amp;ndash;line 行数表示 -n, &amp;ndash;no-ignore .gitignore内のファイルを見ない -h, &amp;ndash;help ヘルプ表示    アイコン アイコンはfreesvg.orgより取得</description>
+ アーカイブファイルも扱える(jar, tar, tazなど)  使用方法 oilio [CLI_MODE_OPTION] &amp;lt;FILEs&amp;hellip;|DIRs&amp;hellip;&amp;gt;
+ コマンドオプション  -b, &amp;ndash;byte バイト数表示 -c, &amp;ndash;character 文字数表示 -l, &amp;ndash;line 行数表示 -h, &amp;ndash;help ヘルプ表示    アイコン アイコンはfreesvg.orgより取得</description>
     </item>
     
   </channel>
