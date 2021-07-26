@@ -6,8 +6,8 @@ disqusShortname = "username" # delete this to disable disqus comments
 googleAnalytics = ""
 
 [params]
-    author = "Calin Tataru"
-    description = "Personal blog theme powered by Hugo"
+    author = "Yohei Noguchi"
+    description = "wcコマンドの拡張"
     githubUsername = "#"
     accent = "red"
     showBorder = true
