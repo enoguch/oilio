@@ -14,11 +14,10 @@ wcコマンドを拡張したソフトウェア
 ## 概要
 与えられたファイルもしくは与えられたディレクトリの直下のファイル群の
 行数、文字数、バイト数をカウントする．
-* .gitignoreファイルを参照できる
 * アーカイブファイルも扱える(jar, tar, tazなど)
 
 # 使用方法
-oilio [CLI_MODE_OPTION] [FILEs...|DIRs...]
+oilio [CLI_MODE_OPTION] <FILEs...|DIRs...>
 * コマンドオプション
   * -b, --byte         バイト数表示
   * -c, --character    文字数表示
